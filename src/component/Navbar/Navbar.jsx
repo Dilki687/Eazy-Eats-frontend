@@ -3,6 +3,7 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import { pink } from '@mui/material/colors';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import "./Navbar.css";
 
 export const Navbar = () => {
   return (
