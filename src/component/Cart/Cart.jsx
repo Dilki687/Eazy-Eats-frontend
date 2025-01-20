@@ -15,7 +15,7 @@ import { ErrorMessage, Field, Formik, Form } from "formik";
 // import * as Yup from "yup";
 // import { error } from "yupp/util/logger";
 
-const style = {
+export const style = {
   position: "absolute",
   top: "50%",
   left: "50%",

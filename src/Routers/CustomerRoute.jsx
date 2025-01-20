@@ -1,10 +1,12 @@
-import { Home } from '@mui/icons-material'
+// import { Home } from '@mui/icons-material'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import RestaurantDetails from '../component/Restaurant/RestaurantDetails'
 import Cart from '../component/Cart/Cart'
 import Profile from '../component/Profile/Profile'
 import { Navbar } from '../component/Navbar/Navbar'
+import { Auth } from '../component/Auth/Auth'
+import Home from "../component/Home/Home";
 
 export const CustomerRoute = () => {
   return (
@@ -17,6 +19,7 @@ export const CustomerRoute = () => {
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/my-profile/*' element={<Profile/>}/>
         </Routes>
+        <Auth/>
     </div>
   )
 }
