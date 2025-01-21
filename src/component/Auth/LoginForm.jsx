@@ -2,7 +2,9 @@ import { Email, Password } from "@mui/icons-material";
 import { Typography, TextField, Button } from "@mui/material";
 import { Field, Formik, Form } from "formik";
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../State/Authentication/Action"
 
 const initialValues = {
   Email: "",
@@ -11,7 +13,11 @@ const initialValues = {
 
 export const LoginForm = () => {
   const navigate = useNavigate();
-  const handleSubmit = () => {};
+  const dispatch=useDispatch()
+  const handleSubmit = (values) => {
+    dispatch(loginUser({userData:values,navigate}))
+
+  };
   return (
     <div>
       <Typography variant="h5" className="text-center">
