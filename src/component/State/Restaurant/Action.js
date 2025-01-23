@@ -1,4 +1,4 @@
-import { api } from "../../../config/api";
+import { api } from "../../config/api";
 import {
   CREATE_CATEGORY_FAILURE,
   CREATE_CATEGORY_REQUEST,
@@ -39,7 +39,7 @@ import {
   UPDATE_RESTAURANT_STATUS_SUCCESS,
 } from "./ActionType";
 
-export const getAllRstaurantsAction = (token) => {
+export const getAllRestaurantsAction = (token) => {
   return async (dispatch) => {
     dispatch({ type: GET_ALL_RESTAURANTS_REQUEST });
     try {

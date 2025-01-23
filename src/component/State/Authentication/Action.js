@@ -1,4 +1,4 @@
-import axios from 'axios'; 
+import axios from "axios";
 import {
   ADD_TO_FAVORITE_FAILURE,
   ADD_TO_FAVORITE_REQUEST,
@@ -13,8 +13,8 @@ import {
   REGISTER_FAILURE,
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
-} from './ActionType';
-import { api, API_URL } from '../../config/api';
+} from "./ActionType";
+import { api, API_URL } from "../../config/api";
 
 export const registerUser = (reqData) => async (dispatch) => {
   dispatch({ type: REGISTER_REQUEST });
@@ -83,7 +83,7 @@ export const addToFavorite =
     dispatch({ type: ADD_TO_FAVORITE_REQUEST });
     try {
       const { data } = await api.put(
-        `/api/restaurants/${restaurantId}/add-favorite`,
+        `/api/restaurants/${restaurantId}/add-favorites`,
         {},
         {
           headers: {
@@ -101,7 +101,6 @@ export const addToFavorite =
   };
 
 export const logout = () => async (dispatch) => {
-
   try {
     localStorage.clear();
     dispatch({ type: LOGOUT });
