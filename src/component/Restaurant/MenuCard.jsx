@@ -38,7 +38,7 @@ const demo = [
   },
 ];
 
-const MenuCard = () => {
+const MenuCard = ({item}) => {
   const handleCheckBoxChange = (value) => {
     console.log("value");
   };
@@ -53,17 +53,14 @@ const MenuCard = () => {
           <div className="lg:flex items-center lg:gap-5">
             <img
               className="w-[7rem] h-[7rem] object-cover"
-              src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={item.images[0]}
               alt=""
             />
             <div className="space-y-1 lg:space-y-5 lg:max-w-2xl">
-              <p className="font-semibold text-xl">Burger</p>
-              <p>$6</p>
+              <p className="font-semibold text-xl">{item.name}</p>
+              <p>${item.price}</p>
               <p className="text-gray-400">
-                A juicy, perfectly seasoned patty nestled in a soft, toasted
-                bun, topped with melted cheese, crisp lettuce, ripe tomatoes,
-                and a dollop of tangy sauce—every bite bursts with flavor and
-                satisfaction.
+                {item.description}
               </p>
             </div>
           </div>

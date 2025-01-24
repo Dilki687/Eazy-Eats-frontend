@@ -70,7 +70,7 @@ export const getRestaurantById = (reqData) => {
         }
       );
       dispatch({ type: GET_RESTAURANT_BY_ID_SUCCESS, payload: response.data });
-      console.log("all restaurant ", data);
+      console.log("all restaurant ", response.data);
     } catch (error) {
       console.log("catch error ", error);
       dispatch({ type: GET_RESTAURANT_BY_ID_FAILURE, payload: error });
@@ -313,6 +313,7 @@ export const getRestaurantsCategory = ({ jwt, restaurantId }) => {
       console.log("get restaurants category ", res.data);
       dispatch({ type: GET_RESTAURANTS_CATEGORY_SUCCESS, payload: res.data });
     } catch (error) {
+      console.log("catch error",error)
       dispatch({
         type: GET_RESTAURANTS_CATEGORY_FAILURE,
         payload: error,
