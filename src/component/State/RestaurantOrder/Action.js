@@ -1,4 +1,4 @@
-import { api } from "../../../config/api.js";
+import { api } from "../../config/api";
 import {
     GET_RESTAURANTS_ORDER_FAILURE,
     GET_RESTAURANTS_ORDER_REQUEST,

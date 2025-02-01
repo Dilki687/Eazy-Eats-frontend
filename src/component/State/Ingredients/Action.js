@@ -1,4 +1,4 @@
-import { api } from "../../../config/api";
+import { api } from "../../config/api";
 import {
   CREATE_INGREDIENT_CATEGORY_SUCCESS,
   CREATE_INGREDIENT_SUCCESS,
